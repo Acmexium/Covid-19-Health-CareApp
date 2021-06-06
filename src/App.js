@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+const App = () => {
+  // Initialize HCL SDK API
+  const API = process.env.REACT_APP_API_KEY;
+  const hclAPI = new window.HclAPI({
+    apiKey: API, // To replace by a working API key
+  });
+  window.HCLSDK.init({
+    apiKey: API,
+  });
 
-function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>YES</h1>
     </div>
   );
-}
+};
 
 export default App;
